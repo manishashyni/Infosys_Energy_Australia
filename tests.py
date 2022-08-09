@@ -12,11 +12,6 @@ class Band:
     name: str
     recordLabel: str
 
-    def __eq__(self, other):
-        if isinstance(other, Band):
-            return self.name == other.name and self.recordLabel == other.recordLabel
-        return False
-
     @classmethod
     def from_dict(cls, data: dict) -> "Band":
         return cls(
@@ -29,10 +24,6 @@ class MusicFestival:
     name: str
     bands: List[Band]
 
-    def __eq__(self, other):
-        if isinstance(other, MusicFestival):
-            return self.name == other.name and self.bands == other.bands
-        return False
 
     @classmethod
     def from_dict(cls, data: dict) -> "MusicFestival":
