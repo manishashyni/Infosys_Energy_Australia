@@ -63,7 +63,7 @@ class TestGetFestivals(TestCase):
             assert [MusicFestival.from_dict(actual_festival) for actual_festival in data] == [MusicFestival.from_dict(expected_festival) for expected_festival in self.expected_festivals()]
 
     '''
-    Ensure the response contains the expected content type header.
+   Ensure the response contains the expected content type header.
     '''
     def test_get_festivals_response_content_type(self):
         response = requests.get(self.path)
